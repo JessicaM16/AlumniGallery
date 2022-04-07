@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Alumni Listing {% endblock %}
+{% block page %}ALUMNI LISTING{% endblock %}
+
+
+{% block content %}
+    <h1>Alumni Listing</h1>
+    <p>Here you'll find alumni and their information</p>
+
+##have to fix with rows and columns
+    <div>
+        {% for alumni in lists %}
+        <div class="card">
+          <div class="column">
+            <div class="container">
+              <h4><b>alumni.name</b></h4>
+              <p>alumni.email</p>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block title %}Job Board{% endblock %}
+{% block page %}JOB BOARD{% endblock %}
+
+
+{% block content %}
+    <h1>Job Board</h1>
+    <p>Here you'll find job titles, job descriptions, employer information for jobs currently available</p>
+
+    <div class = "row">
+      <table class="col m6 offset-m3">
+        <thead>
+          <th>id</th>
+          <th>Name</th>
+          <th>Company</th>
+          <th>Email</th>
+          <th>Required Experience</th>
+          <th>Job Details</th>
+        </thead>
+
+
+        <tbody>
+          {% for job in board %}
+            <tr> 
+              <td>{{job.id}}</td>
+              <td>{{job.name}}</td>
+              <td>{{job.company}}</td>
+              <td>{{job.email}}</td>
+              <td>{{job.experience}}</td> 
+              <td>{{job.details}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  
+{% endblock %} 

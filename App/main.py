@@ -10,18 +10,26 @@ from datetime import timedelta
 
 from App.database import init_db, get_migrate
 
+#from App.models.jobs import Job
+
 from App.controllers import (
     setup_jwt
 )
 
 from App.views import (
     user_views,
-    api_views
+    api_views,
+    jobBoard_views,
+    alumniListing_views,
+    signUp_views,
 )
 
 views = [
     user_views,
-    api_views
+    api_views,
+    jobBoard_views,
+    alumniListing_views,
+    signUp_views
 ]
 
 def add_views(app, views):

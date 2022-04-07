@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block page %}SIGN UP{% endblock %}
+
+{{ super() }}
+
+{% block content %}
+    <h1>Sign Up</h1>
+    <p>Here you'll sign up for an account</p>
+{% endblock %}
+
+<div class ="row">
+    <form id ="myForm" class="col s12">
+        <div class ="row">
+            <div class ="input-field col s12">
+                <input name="username" type="text" required>
+                <label for="username">Username</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="email" type="email" required>
+                <label for="email">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="gradyear" type="number" required>
+                <label for="gradyear">Graduation Year</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="program" type="text" required>
+                <label for="program">Program</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="faculty" type="text" required>
+                <label for="faculty">Faculty</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="password" type="password" required pattern="^(?.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input name="submit" class="btn waves-effect waves-light blue" value="Sign Up">
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
