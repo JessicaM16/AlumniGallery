@@ -22,6 +22,7 @@ from App.views import (
     jobBoard_views,
     alumniListing_views,
     signUp_views,
+    logIn_views,
 )
 
 views = [
@@ -29,7 +30,8 @@ views = [
     api_views,
     jobBoard_views,
     alumniListing_views,
-    signUp_views
+    signUp_views,
+    logIn_views
 ]
 
 def add_views(app, views):
