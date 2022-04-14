@@ -17,10 +17,22 @@
                 <label for="username">Username</label>
             </div>
         </div>
+        <div class ="row">
+            <div class ="input-field col s12">
+                <input name="name" type="text" required>
+                <label for="name">Name</label>
+            </div>
+        </div>
         <div class="row">
             <div class="input-field col s12">
                 <input name="email" type="email" required>
                 <label for="email">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="password" type="password" required pattern="^(?.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+                <label for="password">Password</label>
             </div>
         </div>
         <div class="row">
@@ -47,12 +59,7 @@
                 <label for="department">Department</label>
             </div>
         </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="password" type="password" required pattern="^(?.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
-                <label for="password">Password</label>
-            </div>
-        </div>
+        
         <div class="row">
             <div class="input-field col s12">
                 <input name="linkedIn" type="text" required>
