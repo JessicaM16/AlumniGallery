@@ -18,6 +18,7 @@ def signUp():
     except IntegrityError:
      db.session.rollback()
      return 'The username or email already exists'
-    return 'User created'
+    #return 'User created'
+    #return render_template('index.html')
 
 
