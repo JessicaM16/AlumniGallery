@@ -13,3 +13,4 @@ def authenticate(uname, password):
   #if user is found and password matches
   if user and user.check_password(password):
     return user
+    #return render_template('index.html', user=user)
