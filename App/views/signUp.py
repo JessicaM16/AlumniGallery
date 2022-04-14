@@ -22,3 +22,6 @@ def signUp():
     #return render_template('index.html')
 
 
+@signUp_views.route('/signUp', methods=['GET'])
+def signUpPage():
+    return render_template('signUp.html')
