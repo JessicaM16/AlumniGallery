@@ -14,3 +14,8 @@ def authenticate(uname, password):
   if user and user.check_password(password):
     return user
     #return render_template('index.html', user=user)
+
+
+@logIn_views.route('/logIn', methods=['GET'])
+def loginPage():
+    return render_template('login.html')
