@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, jsonify, request, send_from_directory
+from flask import Blueprint, redirect, render_template, request, send_from_directory
 from flask_jwt import jwt_required
 
 from App.models.user import db, User

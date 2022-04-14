@@ -7,84 +7,86 @@
 {% block content %}
     <h1>Sign Up</h1>
     <p>Here you'll sign up for an account</p>
+    <div class ="row">
+        <form id ="myForm" class="col s12"  method="POST" action="/signUp">
+            <div class ="row">
+                <div class ="input-field col s12">
+                    <input name="username" type="text" required>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <div class ="row">
+                <div class ="input-field col s12">
+                    <input name="name" type="text" required>
+                    <label for="name">Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="email" type="email" required>
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="password" type="password" required pattern="^(?.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="graduationyear" type="number" required>
+                    <label for="graduationyear">Graduation Year</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="programme" type="text" required>
+                    <label for="programme">Programme</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="faculty" type="text" required>
+                    <label for="faculty">Faculty</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="department" type="text" required>
+                    <label for="department">Department</label>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="linkedIn" type="text" required>
+                    <label for="linkedIn">Linked In</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="facebook" type="text">
+                    <label for="facebook">Facebook</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="instagram" type="text">
+                    <label for="instagram">Instagram</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input name="submit" class="btn waves-effect waves-light blue" value="Sign Up">
+                </div>
+            </div>
+    
+        </form>
+    
+    </div>
+
 {% endblock %}
 
-<div class ="row">
-    <form id ="myForm" class="col s12"  method="POST" action="/signUp">
-        <div class ="row">
-            <div class ="input-field col s12">
-                <input name="username" type="text" required>
-                <label for="username">Username</label>
-            </div>
-        </div>
-        <div class ="row">
-            <div class ="input-field col s12">
-                <input name="name" type="text" required>
-                <label for="name">Name</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="email" type="email" required>
-                <label for="email">Email</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="password" type="password" required pattern="^(?.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
-                <label for="password">Password</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="graduationyear" type="number" required>
-                <label for="graduationyear">Graduation Year</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="programme" type="text" required>
-                <label for="programme">Programme</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="faculty" type="text" required>
-                <label for="faculty">Faculty</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="department" type="text" required>
-                <label for="department">Department</label>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="linkedIn" type="text" required>
-                <label for="linkedIn">Linked In</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="facebook" type="text">
-                <label for="facebook">Facebook</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="instagram" type="text">
-                <label for="instagram">Instagram</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <input name="submit" class="btn waves-effect waves-light blue" value="Sign Up">
-            </div>
-        </div>
 
-    </form>
-
-</div>
 

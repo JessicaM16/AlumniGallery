@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, jsonify, request, send_from_directory
+from flask import Blueprint, redirect, render_template, request, send_from_directory
 from flask_jwt import JWT, jwt_required, current_identity
 from sqlalchemy.exc import IntegrityError
 
@@ -18,6 +18,10 @@ def signUp():
     except IntegrityError:
      db.session.rollback()
      return 'The username or email already exists'
-    return 'User created'
+    #return 'User created'
+    #return render_template('index.html')
 
 
+@signUp_views.route('/signUp', methods=['GET'])
+def signUpPage():
+    return render_template('signUp.html')
