@@ -49,6 +49,16 @@
                 <div class="input-field col s12">
                     <input name="faculty" type="text" required>
                     <label for="faculty">Faculty</label>
+                    <select name="faculty" id="faculty">
+                        <option value="engineering">Engineering</option>
+                        <option value="foodAndAgriculture">Food & Agriculture</option>
+                        <option value="humanitiesAndEducation">Humanities & Education</option>
+                        <option value="law">Law</option>
+                        <option value="medicalSciences">Medical Sciences</option>
+                        <option value="scienceAndTechnology">Science and Technology</option>
+                        <option value="socialSciences">Social Sciences</option>
+                        <option value="sport">Sport</option>
+                    </select>
                 </div>
             </div>
             <div class="row">
@@ -60,19 +70,19 @@
             
             <div class="row">
                 <div class="input-field col s12">
-                    <input name="linkedIn" type="text" required>
+                    <input name="linkedIn" type="url" required>
                     <label for="linkedIn">Linked In</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input name="facebook" type="text">
+                    <input name="facebook" type="url">
                     <label for="facebook">Facebook</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input name="instagram" type="text">
+                    <input name="instagram" type="url">
                     <label for="instagram">Instagram</label>
                 </div>
             </div>
@@ -85,8 +95,9 @@
         </form>
     
     </div>
+    {% endblock %}
+  
 
-{% endblock %}
 
 
 
