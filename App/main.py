@@ -6,7 +6,7 @@ from flask_cors import CORS
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
 from datetime import timedelta
-
+from sqlalchemy.exc import IntegrityError
 
 from App.database import init_db, get_migrate
 
@@ -22,6 +22,7 @@ from App.views import (
     jobBoard_views,
     alumniListing_views,
     signUp_views,
+    logIn_views,
 )
 
 views = [
@@ -29,7 +30,8 @@ views = [
     api_views,
     jobBoard_views,
     alumniListing_views,
-    signUp_views
+    signUp_views,
+    logIn_views
 ]
 
 def add_views(app, views):

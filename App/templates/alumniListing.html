@@ -32,7 +32,19 @@
             <div class="card-title">
               <b>{{alumni.name}}</b>
             </div>
+            <div class="card-image">
+              <img="{{alumni.image}}">
+            </div>
+
             <div class="card-content">
+              <p><b>Degree:</b> {{alumni.programme}} </p>
+              <P><b>Faculty:</b> {{alumni.faculty}} </P>
+              <p><b>Department:</b> {{alumni.department}}</p>
+              <p><b>Graduation Year:</b> {{alumni.graduationyear}}</p>
+              #probs make a model for social media and access all through there or just put it one time
+              <p><b>LinkedIn:</b> <a href="https://tt.linkedin.com/in/janedoe">janedoe</a></p>
+              <p><b>Facebook:</b> <a href="https://www.facebook.com/jane.doe33">jane.doe33</a></p>
+              <p><b>Instagram:</b> <a href="https://www.instagram.com/jane_doe">jane_doe</a></p>
               <p> <a href="mailto:{{alumni.email}}" >{{alumni.email}}</a> </p>
               
             </div>
@@ -46,8 +58,26 @@
 
     -->
     <div class="row">
-      
-      <div class="col s6 m3">
+      <section class="row">
+        
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s10">
+                <i class="material-icons prefix">search</i>
+                <textarea id="icon_prefix2" name="search" class="materialize-textarea"></textarea>
+                <label for="icon_prefix2">Search</label>
+              </div>
+              <div class="input-field s2">
+                <button class="btn waves-effect waves-light" type="submit" >Search
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        
+
+      </section>
+      <div class="col s12 m3">
 
         <div class="card ">
           <div class="card-content">
@@ -55,18 +85,18 @@
               <b>Jane Doe</b>
             </div>
 
-            <div class="card-image">
+            <!--<div class="card-image">
               <img src="https://placedog.net/500/300?r" >
             </div>
-
+          -->
             <div class="card-content">
               <p><b>Degree:</b> </p>
               <P><b>Faculty:</b> </P>
               <p><b>Department:</b> </p>
               <p><b>Graduation Year:</b> </p>
-              <p><b>LinkedIn:</b> tired</p>
-              <p><b>Facebook:</b> jane.doe33</p>
-              <p><b>Instagram:</b> @jane_doe</p>
+              <p><b>LinkedIn:</b> <a href="https://tt.linkedin.com/in/janedoe">janedoe</a></p>
+              <p><b>Facebook:</b> <a href="https://www.facebook.com/jane.doe33">jane.doe33</a></p>
+              <p><b>Instagram:</b> <a href="https://www.instagram.com/jane_doe">jane_doe</a></p>
               <p> <a href="mailto:jane.doe@gmail.com" >jane.doe@gmail.com</a> </p>
             </div>
             
@@ -75,78 +105,78 @@
         </div>
       </div>
     
-      <div class="col s6 m3">
+      <div class="col s12 m3">
 
         <div class="card ">
           <div class="card-content">
             <div class="card-title">
               <b>John Doe</b>
             </div>
-
+<!--
             <div class="card-image">
               <img src="https://placedog.net/501/300?r" >
             </div>
-
+-->
             <div class="card-content">
               <p><b>Degree:</b> </p>
               <P><b>Faculty:</b> </P>
               <p><b>Department:</b> </p>
               <p><b>Graduation Year:</b> </p>
-              <p><b>LinkedIn:</b> tired</p>
-              <p><b>Facebook:</b> johndoe3</p>
-              <p><b>Instagram:</b> @john_doe</p>
+              <p><b>LinkedIn:</b> <a href="https://tt.linkedin.com/in/johndoe">johndoe</a></p>
+              <p><b>Facebook:</b> <a href="https://www.facebook.com/johndoe3">johndoe3</a></p>
+              <p><b>Instagram:</b> <a href="https://www.instagram.com/john_doe">john_doe</a></p>
               <p> <a href="mailto:john.doe@gmail.com" >john.doe@gmail.com</a> </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col s6 m3">
+      <div class="col s12 m3">
 
         <div class="card ">
           <div class="card-content">
             <div class="card-title">
               <b>Alice Character</b>
             </div>
-
+<!--
             <div class="card-image">
               <img src="https://placedog.net/502/300?r" >
             </div>
-
+-->
             <div class="card-content">
               <p><b>Degree:</b> </p>
               <P><b>Faculty:</b> </P>
               <p><b>Department:</b> </p>
               <p><b>Graduation Year:</b> </p>
-              <p><b>LinkedIn:</b> tired</p>
-              <p><b>Facebook:</b> alice_Char</p>
-              <p><b>Instagram:</b> @alice._.char</p>
+              <p><b>LinkedIn:</b> <a href="https://tt.linkedin.com/in/aliceChar">aliceChar</a></p>
+              <p><b>Facebook:</b> <a href="https://www.facebook.com/alice_Char">alice_Char</a></p>
+              <p><b>Instagram:</b> <a href="https://www.instagram.com/alice._.char">alice._.char</a></p>
               <p> <a href="mailto:alice.character@gmail.com" >alice.character@gmail.com</a> </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col s6 m3">
+      <div class="col s12 m3">
 
         <div class="card ">
           <div class="card-content">
             <div class="card-title">
               <b>Bob Character</b>
             </div>
-
+<!--
             <div class="card-image">
               <img src="https://placedog.net/503/300?r" >
             </div>
-
+-->
             <div class="card-content">
               <p><b>Degree:</b> </p>
               <P><b>Faculty:</b> </P>
               <p><b>Department:</b> </p>
               <p><b>Graduation Year:</b> </p>
-              <p><b>LinkedIn:</b> tired</p>
-              <p><b>Facebook:</b> bob_Character96</p>
-              <p><b>Instagram:</b> @bob._.char</p>
+              <p><b>LinkedIn:</b> <a href="https://tt.linkedin.com/in/bobChar">bobChar</a></p>
+              <p><b>Facebook:</b> <a href="https://www.facebook.com/bob_Char96">bob_Char96</a></p>
+              <p><b>Instagram:</b> <a href="https://www.instagram.com/bob._.char">bob._.char</a></p>
               <p> <a href="mailto:bob.character@gmail.com"" >bob.character@gmail.com"</a> </p>
             </div>
           </div>
@@ -154,113 +184,7 @@
 
       </div>
 
-<div class="col s6 m3">
-
-        <div class="card ">
-          <div class="card-content">
-            <div class="card-title">
-              <b>Jane Doe</b>
-            </div>
-
-            <div class="card-image">
-              <img src="https://placedog.net/504/300?r" >
-            </div>
-
-            <div class="card-content">
-              <p><b>Degree:</b> </p>
-              <P><b>Faculty:</b> </P>
-              <p><b>Department:</b> </p>
-              <p><b>Graduation Year:</b> </p>
-              <p><b>LinkedIn:</b> tired</p>
-              <p><b>Facebook:</b> jane.doe33</p>
-              <p><b>Instagram:</b> @jane_doe</p>
-              <p> <a href="mailto:jane.doe@gmail.com" >jane.doe@gmail.com</a> </p>
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-    
-      <div class="col s6 m3">
-
-        <div class="card ">
-          <div class="card-content">
-            <div class="card-title">
-              <b>John Doe</b>
-            </div>
-
-            <div class="card-image">
-              <img src="https://placedog.net/505/300?r" >
-            </div>
-
-            <div class="card-content">
-              <p><b>Degree:</b> </p>
-              <P><b>Faculty:</b> </P>
-              <p><b>Department:</b> </p>
-              <p><b>Graduation Year:</b> </p>
-              <p><b>LinkedIn:</b> tired</p>
-              <p><b>Facebook:</b> johndoe3</p>
-              <p><b>Instagram:</b> @john_doe</p>
-              <p> <a href="mailto:john.doe@gmail.com" >john.doe@gmail.com</a> </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s6 m3">
-
-        <div class="card ">
-          <div class="card-content">
-            <div class="card-title">
-              <b>Alice Character</b>
-            </div>
-
-            <div class="card-image">
-              <img src="https://placedog.net/506/300?r" >
-            </div>
-
-            <div class="card-content">
-              <p><b>Degree:</b> </p>
-              <P><b>Faculty:</b> </P>
-              <p><b>Department:</b> </p>
-              <p><b>Graduation Year:</b> </p>
-              <p><b>LinkedIn:</b> tired</p>
-              <p><b>Facebook:</b> alice_Char</p>
-              <p><b>Instagram:</b> @alice._.char</p>
-              <p> <a href="mailto:alice.character@gmail.com" >alice.character@gmail.com</a> </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s6 m3">
-        
-        <div class="card ">
-          <div class="card-content">
-            <div class="card-title">
-              <b>Bob Character</b>
-            </div>
-
-            <div class="card-image">
-              <img src="https://placedog.net/507/300?r" >
-            </div>
-
-            <div class="card-content">
-              <p><b>Degree:</b> </p>
-              <P><b>Faculty:</b> </P>
-              <p><b>Department:</b> </p>
-              <p><b>Graduation Year:</b> </p>
-              <p><b>LinkedIn:</b> tired</p>
-              <p><b>Facebook:</b> bob_Character96</p>
-              <p><b>Instagram:</b> @bob._.char</p>
-              <p> <a href="mailto:bob.character@gmail.com"" >bob.character@gmail.com"</a> </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
+      
 
 
     
