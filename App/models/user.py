@@ -10,7 +10,12 @@ class User(db.Model):
     programme=db.Column(db.String(120),nullable=False)
     faculty=db.Column(db.String(120),nullable=False)
     department=db.Column(db.String(120),nullable=False)
-    socialmedia=db.Column(db.String(120),nullable=False)
+    #socialmedia=db.Column(db.String(120),nullable=False)
+    linkedIn=db.Column(db.String, nullable=False)
+    facebook=db.Column(db.String, nullable=True)
+    instagram=db.Column(db.String, nullable=True)
+
+
 
     
     def __init__(self, username, password):
