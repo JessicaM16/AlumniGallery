@@ -4,7 +4,7 @@ from App.database import db
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username =  db.Column(db.String, nullable=False, unique=True)
-    name=db.Column(db.String, nullable=False)
+    #name=db.Column(db.String, nullable=False)
     email=db.Column(db.String(120),unique=True, nullable=False)
     password = db.Column(db.String(120), nullable=False)
     graduationyear=db.Column(db.Integer, nullable=False)
@@ -12,9 +12,9 @@ class User(db.Model):
     faculty=db.Column(db.String(120),nullable=False)
     department=db.Column(db.String(120),nullable=False)
     #socialmedia=db.Column(db.String(120),nullable=False)
-    linkedIn=db.Column(db.String, nullable=False)
-    facebook=db.Column(db.String, nullable=True)
-    instagram=db.Column(db.String, nullable=True)
+    #linkedIn=db.Column(db.String(120), nullable=False)
+    #facebook=db.Column(db.String(120), nullable=True)
+    #instagram=db.Column(db.String(120), nullable=True)
 
 
 

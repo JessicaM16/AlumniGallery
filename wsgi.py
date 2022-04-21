@@ -16,9 +16,10 @@ def initialize():
 
         for job in jobs:
             row=Job(name=job['name'], company=job['company'], email=job['email'], experience=job['experience'], details=job['details'])
+            print(row.toDict())
             db.session.add(row)
         db.session.commit()
-
+    
     print('database intialized')
 
 @app.cli.command("create-user")
