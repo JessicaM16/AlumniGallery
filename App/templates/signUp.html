@@ -7,92 +7,37 @@
 {% block content %}
     <h1>Sign Up</h1>
     <p>Here you'll sign up for an account</p>
-    <div class ="row">
-        <form id ="myForm" class="col s12"  method="POST" action="/signUp">
-            <div class ="row">
-                <div class ="input-field col s12">
-                    <input name="username" type="text" required>
-                    <label for="username">Username</label>
-                </div>
-            </div>
-            <div class ="row">
-                <div class ="input-field col s12">
-                    <input name="name" type="text" required>
-                    <label for="name">Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input name="email" type="email" required>
-                    <label for="email">Email</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input name="password" type="password" required pattern="^(?.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
-                    <label for="password">Password</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input name="graduationyear" type="number" required>
-                    <label for="graduationyear">Graduation Year</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input name="programme" type="text" required>
-                    <label for="programme">Programme</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input name="faculty" type="text" required>
-                    <label for="faculty">Faculty</label>
-                    <select name="faculty" id="faculty">
-                        <option value="engineering">Engineering</option>
-                        <option value="foodAndAgriculture">Food & Agriculture</option>
-                        <option value="humanitiesAndEducation">Humanities & Education</option>
-                        <option value="law">Law</option>
-                        <option value="medicalSciences">Medical Sciences</option>
-                        <option value="scienceAndTechnology">Science and Technology</option>
-                        <option value="socialSciences">Social Sciences</option>
-                        <option value="sport">Sport</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input name="department" type="text" required>
-                    <label for="department">Department</label>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="input-field col s12">
-                    <input name="linkedIn" type="url" required>
-                    <label for="linkedIn">Linked In</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input name="facebook" type="url">
-                    <label for="facebook">Facebook</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input name="instagram" type="url">
-                    <label for="instagram">Instagram</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a class="waves-effect waves-light btn-large">Sign Up</a>
-                </div>
-            </div>
-    
-        </form>
+    <div class="row">
+        <div class="row">
+          <form id="myForm" class="col s12 m8 offset-m2" method="POST" action="/signUp">
+              {{ form.csrf_token }}
+  
+              <div class="input-field col s12 m8 offset-m2"> 
+                {{ form.username(size=20, class="validate") }}
+                {{ form.username.label }}
+              </div>
+  
+              <div class="input-field col s12 m8 offset-m2">
+                {{ form.email(size=50, class="validate") }}
+                {{ form.email.label }}
+              </div>
+  
+              <div class="input-field col s12 m8 offset-m2">
+                {{ form.password(size=20, class="validate") }}
+                {{ form.password.label }}
+              </div>
+  
+              <div class="input-field col s12 m8 offset-m2">
+                {{ form.confirm(size=20, class="validate") }}
+                {{ form.confirm.label }}
+              </div>
+  
+              <div class="input-field col s12 m8 offset-m2">
+                {{form.submit}}
+              </div> 
+          </form>
+        </div>
+    </div>
     
     </div>
     {% endblock %}

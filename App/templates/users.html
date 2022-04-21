@@ -14,7 +14,7 @@
       <table>
         <thead>
           <tr>
-            <th>Id</th><th>Username</th>
+            <th>Id</th><th>Username</th><th>Email</th><th>Graduation year</th><th>Programme</th><th>Faculty</th>
           </tr>
         </thead>
         <tbody>
@@ -22,6 +22,10 @@
             <tr>
                 <td>{{user.id}}</td>
                 <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.graduationyear}}</td>
+                <td>{{user.programme}}</td>
+                <td>{{user.faculty}}</td>
             </tr>
           {% endfor %}
         <tbody>
