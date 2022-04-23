@@ -5,27 +5,31 @@
 {{ super() }}
 
 {% block content %}
-    <h1>Log In</h1>
-    <div class="row">
-      
-        <form class="col s12 m8 offset-m2" method="POST" action="/logIn">
-            {{ form.csrf_token }}
-
-            <div class="input-field col s12 m8 offset-m2"> 
-              {{ form.username(size=20, class="validate") }}
-              {{ form.username.label }}
-            </div>
-
-            <div class="input-field col s12 m8 offset-m2">
-              {{ form.password(size=20, class="validate") }}
-              {{ form.password.label }}
-            </div>
-
-            <div class="input-field col s12 m8 offset-m2">
-              {{form.submit}}
-            </div> 
-        </form>
-      
+    <!--<h1>Log In</h1>-->
+    <div class = "row">
+      <form id = "myForm" class = "col s12" method="POST" action="/logIn" >
+          <div class = "row">
+              <div class = " input-field col s12">
+                  <!-- <input name = "username" type = "text" required>
+                  <label for = "username">Username</label> -->
+                  <input type="text" name="Uuername" placeholder="Username">
+                
+              </div>
+          </div>
+          <div class ="row">
+              <div class = "input-field col s12">
+                  <!-- <input name = "password" type="password" required pattern ="^(?.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+                  <label for = "password">Password</label> -->
+                  <input type="password" name="password" placeholder="Password">
+              </div>
+          </div>
+          <!-- <div class ="row">
+              <div class = "col s12">
+                  <a class="waves-effect waves-light btn-large">Log In</a>
+              </div>
+          </div> -->
+          <button class="button">Login</button>
+      </form>
   </div>
 {% endblock %}
 

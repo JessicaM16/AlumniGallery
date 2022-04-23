@@ -12,6 +12,12 @@ from App.database import init_db, get_migrate
 
 #from App.models.jobs import Job
 
+#need to install pip install -r requirements.txt
+#pip install wtforms-validators
+#pip install flask-WTF
+#pip install email_validator
+
+
 from App.controllers import (
     setup_jwt
 )

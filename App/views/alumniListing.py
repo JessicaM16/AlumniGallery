@@ -7,15 +7,11 @@ alumniListing_views = Blueprint('alumniListing_views', __name__, template_folder
 
 @alumniListing_views.route('/alumniListing')
 def get_alumniListing():
-    lists=(
-        ("Jane Doe", "jane.doe@gmail.com"),
-        ("John Doe", "john.doe@gmail.com"),
-        ("Alice Character", "alice.character@gmail.com"),
-        ("Bob Character", "bob.character@gmail.com")
-    )
-    return render_template('alumniListing.html', lists=lists)
+    users=User.query.all()
+    return render_template('alumniListing.html', users=users)
 #graduation year, programme, faculty or department
 
+@alumniListing_views.route('/searchUsers')
 def users_search(search):
     return User.query.filter(
         User.name.like('%'+search+'%')
@@ -26,7 +22,7 @@ def users_search(search):
     )
 #User.name.like('%'+search+'%')
 
-@alumniListing_views.route('/')
+@alumniListing_views.route('/search')
 def search():
     search= request.args.get('search')
     users=None

@@ -2,7 +2,8 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from App.database import db
 
 class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username =  db.Column(db.String, nullable=False, unique=True)
     #name=db.Column(db.String, nullable=False)
     email=db.Column(db.String(120),unique=True, nullable=False)
@@ -11,17 +12,25 @@ class User(db.Model):
     programme=db.Column(db.String(120),nullable=False)
     faculty=db.Column(db.String(120),nullable=False)
     department=db.Column(db.String(120),nullable=False)
-    #socialmedia=db.Column(db.String(120),nullable=False)
-    #linkedIn=db.Column(db.String(120), nullable=False)
-    #facebook=db.Column(db.String(120), nullable=True)
-    #instagram=db.Column(db.String(120), nullable=True)
+    
+    linkedIn=db.Column(db.String(120), nullable=False)
+    facebook=db.Column(db.String(120), nullable=True)
+    instagram=db.Column(db.String(120), nullable=True)
 
 
 
     
-    def __init__(self, username, password):
+    def __init__(self, username, password, email,faculty,graduationyear,programme,department, linkedIn,facebook,instagram):
         self.username = username
         self.set_password(password)
+        self.email=email
+        self.graduationyear=graduationyear
+        self.programme=programme
+        self.faculty=faculty
+        self.department=department
+        self.linkedIn=linkedIn
+        self.facebook=facebook
+        self.instagram=instagram
 
     def toDict(self):
         return{
