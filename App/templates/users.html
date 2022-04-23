@@ -7,14 +7,14 @@
 {% block content %}
     <div class="row">
         <p>
-            This is table is renderd on the Server. Flask gets the data from the database and uses jinja templates to dyanmically render this page when a request is sent to <a href="/usrs">/users</a>.
+            This is table is renderd on the Server. Flask gets the data from the database and uses jinja templates to dyanmically render this page when a request is sent to <a href="/users">/users</a>.
         </p>
     </div>
     <div class="row">
       <table>
         <thead>
           <tr>
-            <th>Id</th><th>Username</th><th>Email</th><th>Graduation year</th><th>Programme</th><th>Faculty</th>
+            <th>Id</th><th>Username</th><th>Email</th><th>Graduation year</th><th>Programme</th><th>Faculty</th><th>Linked In</th><th>Facebook</th><th>Instagram</th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +26,9 @@
                 <td>{{user.graduationyear}}</td>
                 <td>{{user.programme}}</td>
                 <td>{{user.faculty}}</td>
+                <td>{{user.linkedIn}}</td>
+                <td>{{user.facebook}}</td>
+                <td>{{user.instagram}}</td>
             </tr>
           {% endfor %}
         <tbody>
