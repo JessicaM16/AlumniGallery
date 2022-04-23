@@ -7,55 +7,7 @@
     <h1>Alumni Listing</h1>
     <p>Here you'll find alumni and their information</p>
 
-##have to fix with rows and columns
-    <!--<div>
-        {% for alumni in lists %}
-        <div class="card">
-          <div class="column">
-            <div class="container">
-              <h4><b>{{alumni.name}}</b></h4>
-              <p>{{alumni.email}}</p>
-            </div>
-          </div>
-        </div>
-
-        {% endfor %}
-             
-    </div>
-  -->
-
-  
-    <div class="row">
-      {% for alumni in lists %}
-      <div class="col s12 m3">
-        <div class="card ">
-          <div class="card-content">
-            <div class="card-title">
-              <b>{{alumni.username}}</b>
-            </div>
-            
-            <div class="card-content">
-              <p><b>Degree:</b> {{alumni.programme}} </p>
-              <P><b>Faculty:</b> {{alumni.faculty}} </P>
-              <p><b>Department:</b> {{alumni.department}}</p>
-              <p><b>Graduation Year:</b> {{alumni.graduationyear}}</p>
-              #probs make a model for social media and access all through there or just put it one time
-              <p><b>LinkedIn:</b> <a href="https://tt.linkedin.com/in/{{alumni.linkedIn}}">{{alumni.linkedIn}}</a></p>
-              <p><b>Facebook:</b> <a href="https://www.facebook.com/{{alumni.facebook}}">{{alumni.facebook}}</a></p>
-              <p><b>Instagram:</b> <a href="https://www.instagram.com/{{alumni.instagram}}">{{alumni.instagram}}</a></p>
-              <p> <a href="mailto:{{alumni.email}}" >{{alumni.email}}</a> </p>
-              
-            </div>
-            
-          </div>
-          
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
     
-
     <div class="row">
       <section class="row">
         
@@ -76,6 +28,55 @@
         
 
       </section>
+
+    <!--<div>
+        {% for alumni in lists %}
+        <div class="card">
+          <div class="column">
+            <div class="container">
+              <h4><b>{{alumni.name}}</b></h4>
+              <p>{{alumni.email}}</p>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+             
+    </div>
+  -->
+
+  
+    <div class="row">
+      {% for alumni in users %}
+      <div class="col s12 m3">
+        <div class="card ">
+          <div class="card-content">
+            <div class="card-title">
+              <b>{{alumni.username}}</b>
+            </div>
+            
+            <div class="card-content">
+              <p><b>Degree:</b> {{alumni.programme}} </p>
+              <P><b>Faculty:</b> {{alumni.faculty}} </P>
+              <p><b>Department:</b> {{alumni.department}}</p>
+              <p><b>Graduation Year:</b> {{alumni.graduationyear}}</p>
+              
+              <p><b>LinkedIn:</b> <a href="https://tt.linkedin.com/in/{{alumni.linkedIn}}">{{alumni.linkedIn}}</a></p>
+              <p><b>Facebook:</b> <a href="https://www.facebook.com/{{alumni.facebook}}">{{alumni.facebook}}</a></p>
+              <p><b>Instagram:</b> <a href="https://www.instagram.com/{{alumni.instagram}}">{{alumni.instagram}}</a></p>
+              <p> <a href="mailto:{{alumni.email}}" >{{alumni.email}}</a> </p>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    
+
 <!--       
       <div class="col s12 m3">
 
