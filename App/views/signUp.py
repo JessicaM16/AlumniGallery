@@ -38,8 +38,13 @@ def signUpAction():
 
     #newUser=create_user(username, fullname,password, email,faculty,graduationyear,programme,department, linkedIn, facebook,instagram)
     newuser = User(username=username, fullname=fullname,password=password, email=email,faculty=faculty, graduationyear=graduationyear,programme=programme,department=department, linkedIn=linkedIn, facebook=facebook,instagram=instagram)
-    db.session.add(newuser)
-    db.session.commit()
+    try:
+        db.session.add(newuser)
+        db.session.commit()
+    except IntegrityError:
+     db.session.rollback()
+     flash('The username or email already exists')
+     return render_template('signUp.html')
     # flash(newuser.username)
     
     flash('SignUp Successful, ')
@@ -47,3 +52,17 @@ def signUpAction():
     return render_template('login.html')
 
 
+# @signUp_views.route('/signUp', methods=['POST'])
+# def signUp():
+#     userData=request.form
+#     newUser= User(username=userData['username'], email=userData['email'], graduationyear=userData['graduationyear'], programme=userData['programme'], faculty=userData['faculty'], department=userData['department'])
+#     newUser.set_password(userData['password'])
+    
+#     try:
+#         db.session.add(newUser)
+#         db.session.commit()
+#     except IntegrityError:
+#      db.session.rollback()
+#      return 'The username or email already exists'
+#     #return 'User created'
+#     return render_template('index.html')
