@@ -23,28 +23,26 @@
              
     </div>
   -->
-  <!--
+
+  
     <div class="row">
       {% for alumni in lists %}
       <div class="col s12 m3">
         <div class="card ">
           <div class="card-content">
             <div class="card-title">
-              <b>{{alumni.name}}</b>
+              <b>{{alumni.username}}</b>
             </div>
-            <div class="card-image">
-              <img="{{alumni.image}}">
-            </div>
-
+            
             <div class="card-content">
               <p><b>Degree:</b> {{alumni.programme}} </p>
               <P><b>Faculty:</b> {{alumni.faculty}} </P>
               <p><b>Department:</b> {{alumni.department}}</p>
               <p><b>Graduation Year:</b> {{alumni.graduationyear}}</p>
               #probs make a model for social media and access all through there or just put it one time
-              <p><b>LinkedIn:</b> <a href="https://tt.linkedin.com/in/janedoe">janedoe</a></p>
-              <p><b>Facebook:</b> <a href="https://www.facebook.com/jane.doe33">jane.doe33</a></p>
-              <p><b>Instagram:</b> <a href="https://www.instagram.com/jane_doe">jane_doe</a></p>
+              <p><b>LinkedIn:</b> <a href="https://tt.linkedin.com/in/{{alumni.linkedIn}}">{{alumni.linkedIn}}</a></p>
+              <p><b>Facebook:</b> <a href="https://www.facebook.com/{{alumni.facebook}}">{{alumni.facebook}}</a></p>
+              <p><b>Instagram:</b> <a href="https://www.instagram.com/{{alumni.instagram}}">{{alumni.instagram}}</a></p>
               <p> <a href="mailto:{{alumni.email}}" >{{alumni.email}}</a> </p>
               
             </div>
@@ -56,7 +54,8 @@
       {% endfor %}
     </div>
 
-    -->
+    
+
     <div class="row">
       <section class="row">
         
@@ -77,6 +76,7 @@
         
 
       </section>
+<!--       
       <div class="col s12 m3">
 
         <div class="card ">
@@ -85,10 +85,7 @@
               <b>Jane Doe</b>
             </div>
 
-            <!--<div class="card-image">
-              <img src="https://placedog.net/500/300?r" >
-            </div>
-          -->
+            
             <div class="card-content">
               <p><b>Degree:</b> </p>
               <P><b>Faculty:</b> </P>
@@ -112,11 +109,7 @@
             <div class="card-title">
               <b>John Doe</b>
             </div>
-<!--
-            <div class="card-image">
-              <img src="https://placedog.net/501/300?r" >
-            </div>
--->
+
             <div class="card-content">
               <p><b>Degree:</b> </p>
               <P><b>Faculty:</b> </P>
@@ -138,11 +131,7 @@
             <div class="card-title">
               <b>Alice Character</b>
             </div>
-<!--
-            <div class="card-image">
-              <img src="https://placedog.net/502/300?r" >
-            </div>
--->
+
             <div class="card-content">
               <p><b>Degree:</b> </p>
               <P><b>Faculty:</b> </P>
@@ -164,11 +153,7 @@
             <div class="card-title">
               <b>Bob Character</b>
             </div>
-<!--
-            <div class="card-image">
-              <img src="https://placedog.net/503/300?r" >
-            </div>
--->
+
             <div class="card-content">
               <p><b>Degree:</b> </p>
               <P><b>Faculty:</b> </P>
@@ -188,7 +173,7 @@
 
 
     
-    </div>
+    </div> -->
 
     
 {% endblock %}
