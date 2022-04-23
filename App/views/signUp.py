@@ -31,12 +31,19 @@ def signUpAction():
 
     userData= User.query.filter_by(username=username).first()
 
+
     if userData:
       flash('Username already exists')
       return render_template('signUp.html')
 
-    newUser=create_user(username, fullname,password, email,faculty,graduationyear,programme,department, linkedIn, facebook,instagram)
-    flash('SignUp Successful')
-    return render_template('signUp.html')
+    #newUser=create_user(username, fullname,password, email,faculty,graduationyear,programme,department, linkedIn, facebook,instagram)
+    newuser = User(username=username, fullname=fullname,password=password, email=email,faculty=faculty, graduationyear=graduationyear,programme=programme,department=department, linkedIn=linkedIn, facebook=facebook,instagram=instagram)
+    db.session.add(newuser)
+    db.session.commit()
+    # flash(newuser.username)
+    
+    flash('SignUp Successful, ')
+    flash(username)
+    return render_template('login.html')
 
 

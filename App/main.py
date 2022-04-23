@@ -12,10 +12,6 @@ from App.database import init_db, get_migrate
 
 #from App.models.jobs import Job
 
-#need to install pip install -r requirements.txt
-#pip install wtforms-validators
-#pip install flask-WTF
-#pip install email_validator
 
 
 from App.controllers import (
@@ -29,6 +25,7 @@ from App.views import (
     alumniListing_views,
     signUp_views,
     logIn_views,
+    logout_views,
 )
 
 views = [
@@ -37,7 +34,8 @@ views = [
     jobBoard_views,
     alumniListing_views,
     signUp_views,
-    logIn_views
+    logIn_views,
+    logout_views
 ]
 
 def add_views(app, views):
@@ -72,6 +70,20 @@ def create_app(config={}):
     init_db(app)
     setup_jwt(app)
     app.app_context().push()
+
+
+    
+    login_manager = LoginManager()
+   
+    login_manager.init_app(app)
+    from .models import User
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
+
+
+
+
     return app
 
 app = create_app()
