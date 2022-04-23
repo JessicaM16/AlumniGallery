@@ -18,6 +18,7 @@ def signup():
 def signUpAction():
     
     username=request.form.get('username')
+    fullname=request.form.get('fullname')
     password=request.form.get('password')
     email=request.form.get('email')
     faculty=request.form.get('faculty')
@@ -34,7 +35,7 @@ def signUpAction():
       flash('Username already exists')
       return render_template('signUp.html')
 
-    newUser=create_user(username, password, email,faculty,graduationyear,programme,department, linkedIn, facebook,instagram)
+    newUser=create_user(username, fullname,password, email,faculty,graduationyear,programme,department, linkedIn, facebook,instagram)
     flash('SignUp Successful')
     return render_template('signUp.html')
 
