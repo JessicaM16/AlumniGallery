@@ -5,47 +5,58 @@
 {{ super() }}
 
 {% block content %}
-    <h1>Success Stories</h1>
-    <p>These are success stories from persons who have used this platform and got a job</p>
+<br>
+<br>
+    <h1>Welcome to the Alumni Gallery </h1>
+    <br>
+    <br>
+    <p></p>
+    
     <div class="slideshow-container">
-
-        <div class="slides">
-         <img src="slide1.jpeg" style="width:100%">
-         
-     </div>
-  
-   <div class="slides">
-     <img src="slide2.jpeg" style="width:100%">
+      <div class="slides">
+        <a href="https://ibb.co/qMFky7C"><img src="https://i.ibb.co/gMFzjmd/slide1-jpg.jpg" alt="slide1-jpg" border="0" /></a>
+      </div>
     
-   </div>
-  
-   <div class="slides">
-     <img src="slide3.jp3g" style="width:100%">
+      <div class="slides">
+        <a href="https://ibb.co/71zvgxx"><img src="https://i.ibb.co/XC4Xyff/slide2-jpg.jpg" alt="slide2-jpg" border="0" /></a>
+      </div>
     
-   </div>
+      <div class="slides">
+        <a href="https://ibb.co/PMzmxcw"><img src="https://i.ibb.co/ZS1LdBW/slide3-jpg.jpg" alt="slide3-jpg" border="0" /></a>
+      </div>
+      
   </div>
   
-  
   <style>
-  slideshow-container {
-    max-width: 500px;
-    position: relative;
-    margin: auto;
-  }
-   </style>
-    
-{% endblock %}
+    * {box-sizing:border-box}
 
-var slideIndex = 0;
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 500px;
+      position: relative;
+      margin: auto;
+    }
+    h1{
+      text-align:center;
+    }
+  </style>
+
+  <script>
+    var slideIndex = 0;
     showSlides();
 
     function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("slides
-    for (i = 0; i < slides.length; i++) {
+      var i;
+      var slides = document.getElementsByClassName("slides");
+      for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change image every 2 seconds
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 3000);
+  </script>
+  
+
+{% endblock %}

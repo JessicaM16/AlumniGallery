@@ -7,8 +7,42 @@
     <h1>Alumni Listing</h1>
     <p>Here you'll find alumni and their information</p>
 
-##have to fix with rows and columns
+    
+    <div class="row">
+      <section class="row">
+        
+          <form class="col s12">
+            <div class="row">
+
+              <div class="input-field col s9" style="margin-left: 300px;">
+                <i class="material-icons prefix">search</i>
+                <textarea id="icon_prefix2" name = "search" class="materialize-textarea"></textarea>
+                <label for="icon_prefix2">Search</label>
+            </div>
+
+            <div  class = "input-field s3" style="margin-left: 550px;">
+                <button class="btn waves-effect waves-light" type="submit">Search
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+
+            </div>
+          </form>
+        
+
+      </section>
+
     <!--<div>
+              <div class="input-field col s10">
+                <i class="material-icons prefix">search</i>
+                <textarea id="icon_prefix2" name="search"  class="materialize-textarea">{% if search %} {{search}} {% endif %}</textarea>
+                <label for="icon_prefix2">Search</label>
+              </div>
+              <div class="input-field s2">
+                <button class="btn waves-effect waves-light" type="submit" >Search
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
         {% for alumni in lists %}
         <div class="card">
           <div class="column">
@@ -26,12 +60,13 @@
 
   
     <div class="row">
-      {% for alumni in lists %}
+      {% for alumni in users %}
       <div class="col s12 m3">
         <div class="card ">
           <div class="card-content">
+            <div class="row">
             <div class="card-title">
-              <b>{{alumni.username}}</b>
+              <b>{{alumni.fullname}}</b>
             </div>
             
             <div class="card-content">
@@ -39,14 +74,14 @@
               <P><b>Faculty:</b> {{alumni.faculty}} </P>
               <p><b>Department:</b> {{alumni.department}}</p>
               <p><b>Graduation Year:</b> {{alumni.graduationyear}}</p>
-              #probs make a model for social media and access all through there or just put it one time
+              
               <p><b>LinkedIn:</b> <a href="https://tt.linkedin.com/in/{{alumni.linkedIn}}">{{alumni.linkedIn}}</a></p>
               <p><b>Facebook:</b> <a href="https://www.facebook.com/{{alumni.facebook}}">{{alumni.facebook}}</a></p>
               <p><b>Instagram:</b> <a href="https://www.instagram.com/{{alumni.instagram}}">{{alumni.instagram}}</a></p>
               <p> <a href="mailto:{{alumni.email}}" >{{alumni.email}}</a> </p>
               
             </div>
-            
+          </div>
           </div>
           
         </div>
@@ -56,26 +91,6 @@
 
     
 
-    <div class="row">
-      <section class="row">
-        
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s10">
-                <i class="material-icons prefix">search</i>
-                <textarea id="icon_prefix2" name="search" class="materialize-textarea"></textarea>
-                <label for="icon_prefix2">Search</label>
-              </div>
-              <div class="input-field s2">
-                <button class="btn waves-effect waves-light" type="submit" >Search
-                  <i class="material-icons right">send</i>
-                </button>
-              </div>
-            </div>
-          </form>
-        
-
-      </section>
 <!--       
       <div class="col s12 m3">
 

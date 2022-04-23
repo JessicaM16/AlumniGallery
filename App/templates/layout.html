@@ -14,9 +14,19 @@
     
     
   </head>
+
+  <style>
+      body {
+        background-image: url("https://i.ibb.co/7bnHSTc/grad4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+  </style>
+
+
+
   <body>
-   
-    
     <section id="section">
     <nav class="grey">
       <div class="nav-wrapper">
@@ -24,22 +34,32 @@
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="left">
                 <li><a href="/">Home</a></li>
+                {% if current_user.is_authenticated %}
                 <li><a href="/jobBoard">Job Board</a></li>
+                {% endif %}
+                {% if current_user.is_authenticated %}
                 <li><a href="/alumniListing">Alumni Listing</a></li>
+                {% endif %}
             </ul>
             <ul id="nav-mobile" class="right">
+              
                 <li><a href= "/signUp" >Sign Up</a></li>
+              
+
+
                 <li><a href= "/logIn" >Log In</a></li>
+
             </ul>
+            
             
         </div>
       </div>
     </nav>
-    
+  
      
     {% with messages = get_flashed_messages() %}
     {% if messages %}
-    <nav class="white black-text" style="padding: 10px">
+    <nav class="white black-text" style= "padding: 10px">
       <div class="nav-wrapper">
           <ul class="flashes">
           {% for message in messages %}
@@ -55,7 +75,11 @@
 
     <div class="container" id="content">{% block content %}{% endblock %}</div>
     
+    
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </section>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </body>
 </html>
