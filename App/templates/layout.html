@@ -16,13 +16,13 @@
   </head>
 
   <style>
-      body {
-        background-image: url("https://i.ibb.co/7bnHSTc/grad4.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-      }
-  </style>
+    body {
+      background-image: url("https://i.ibb.co/7bnHSTc/grad4.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+</style>
 
 
 
@@ -41,14 +41,19 @@
                 <li><a href="/alumniListing">Alumni Listing</a></li>
                 {% endif %}
             </ul>
+            
             <ul id="nav-mobile" class="right">
-              
+              {% if not current_user.is_authenticated %}
                 <li><a href= "/signUp" >Sign Up</a></li>
-              
+              {% endif %}
 
-
+              {% if not current_user.is_authenticated %}
                 <li><a href= "/logIn" >Log In</a></li>
+              {% endif %}
 
+              {% if current_user.is_authenticated %}
+                <li><a href="/logout">Log Out</a></li>
+              {% endif %}
             </ul>
             
             
